@@ -13,6 +13,7 @@
   #home .app__wrapper .copyright {
     display: none;
   }
+  
   .app__header {
     flex: 1;
     width: 100%;
@@ -38,6 +39,7 @@
       padding: 6rem 1rem 2rem;
     }
   }
+  
   .app__header-info {
     flex: 0.65;
     display: flex;
@@ -54,6 +56,7 @@
       margin-right: 0rem;
     }
   }
+  
   .app__header-badge {
     width: 100%;
     display: flex;
@@ -199,4 +202,4 @@
       margin: 2rem 0;
     }
   }
-        
+  
