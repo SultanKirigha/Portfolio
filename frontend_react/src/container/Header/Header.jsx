@@ -1,8 +1,9 @@
-import React from 'react'
+import React from 'react';
 import { motion } from 'framer-motion';
 
+import { AppWrap } from '../../wrapper';
 import { images } from '../../constants';
-import '../Header/Header.css'
+import './Header.css';
 
 const scaleVariants = {
   whileInView: {
@@ -15,13 +16,13 @@ const scaleVariants = {
   },
 };
 
-const Header = () => {
-  return (
-    <div className="app__header app__flex">
+const Header = () => (
+  <div className="app__header app__flex">
     <motion.div
       whileInView={{ x: [-100, 0], opacity: [0, 1] }}
       transition={{ duration: 0.5 }}
-      className="app__header-info">
+      className="app__header-info"
+    >
       <div className="app__header-badge">
         <div className="badge-cmp app__flex">
           <span>👋</span>
@@ -29,13 +30,15 @@ const Header = () => {
             <p className="p-text">Hello, I am</p>
             <h1 className="head-text">Kirigha</h1>
           </div>
-          <div className="tag-cmp app__flex">
-            <p className="p-text">Web Developer</p>
-            <p className="p-text">UI/UX Designer</p>
         </div>
+
+        <div className="tag-cmp app__flex">
+          <p className="p-text">Web Developer</p>
+          <p className="p-text">Freelancer</p>
         </div>
       </div>
-    </motion.div>  
+    </motion.div>
+
     <motion.div
       whileInView={{ opacity: [0, 1] }}
       transition={{ duration: 0.5, delayChildren: 0.5 }}
@@ -62,8 +65,7 @@ const Header = () => {
         </div>
       ))}
     </motion.div>
-    </div>
-  )
-}
+  </div>
+);
 
-export default Header
+export default AppWrap(Header, 'home');
